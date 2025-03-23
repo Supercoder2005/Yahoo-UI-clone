@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahoo Clone - Creative Version</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yahoo: '#5f01d1',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .search-animation { animation: float 3s ease-in-out infinite; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #5f01d1, #ff0099);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-poppins">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="#" class="text-[32px] font-bold text-yahoo">
+                    yahoo!
+                </a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <button class="hover:text-yahoo transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </button>
+                <button class="hover:text-yahoo transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <div class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                    </svg>
+                    <span class="text-gray-700">23°C</span>
+                    <span class="text-gray-500 text-sm">Barasat</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Greeting -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold gradient-text mb-2 search-animation">Good evening!</h1>
+            <p class="text-gray-600">Today is March 22</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="max-w-2xl mx-auto mb-12">
+            <div class="bg-white rounded-full shadow-lg p-4 flex items-center space-x-4 hover:shadow-xl transition-shadow duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input type="text" placeholder="Search the web" class="flex-1 outline-none text-lg">
+                <button class="text-yahoo hover:text-opacity-80 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex justify-center space-x-8 mb-12">
+            <a href="#" class="flex flex-col items-center group">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yahoo" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <span class="mt-2 text-sm text-gray-600 group-hover:text-yahoo transition-colors">Cricket</span>
+            </a>
+            <a href="#" class="flex flex-col items-center group">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yahoo" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+                    </svg>
+                </div>
+                <span class="mt-2 text-sm text-gray-600 group-hover:text-yahoo transition-colors">Movies</span>
+            </a>
+            <a href="#" class="flex flex-col items-center group">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yahoo" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 2v4M8 2v4M3 10h18"/>
+                    </svg>
+                </div>
+                <span class="mt-2 text-sm text-gray-600 group-hover:text-yahoo transition-colors">News</span>
+            </a>
+            <a href="#" class="flex flex-col items-center group">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yahoo" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                    </svg>
+                </div>
+                <span class="mt-2 text-sm text-gray-600 group-hover:text-yahoo transition-colors">Horoscope</span>
+            </a>
+        </div>
+
+        <!-- Trending Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 max-w-3xl mx-auto">
+            <h2 class="text-xl font-semibold mb-4 gradient-text">Trending now</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">1.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Amit Shah</span>
+                    </div>
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">2.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Delimitation Meet</span>
+                    </div>
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">3.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Karnataka Bandh</span>
+                    </div>
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">4.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Yashwant Verma</span>
+                    </div>
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">5.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Chandrababu Naidu</span>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">6.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Osama Tabash</span>
+                    </div>
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">7.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Avneet Kaur</span>
+                    </div>
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">8.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Ganesh Acharya</span>
+                    </div>
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">9.</span>
+                        <span class="group-hover:text-yahoo transition-colors">Varun Chakravarthy</span>
+                    </div>
+                    <div class="flex items-center space-x-3 group cursor-pointer">
+                        <span class="text-yahoo font-semibold">10.</span>
+                        <span class="group-hover:text-yahoo transition-colors">IPL 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
